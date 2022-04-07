@@ -1,0 +1,367 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --dark-gold-background: rgba(209, 179, 8, 0.678);
+    --content-background: skyblue;
+}
+
+/*make it responsive later */
+body {
+    display: grid;
+    grid-template-columns: 1fr minmax(0,275px) 750px minmax(0,275px) 1fr;
+    grid-template-rows: 7.5% 9% 83.5%;
+    grid-template-areas: 
+        "side1 sidebar header1 header1 side2"
+        "side1 sidebar header2 header2 side2"
+        "side1 sidebar mainContent sidebar2 side2"
+}
+
+/*for the black items*/
+.blackbar {
+    background-color: black;
+    height: 100%;
+}
+
+#side1 {
+    grid-area: side1;
+}
+
+#side2 {
+    grid-area: side2;
+}
+/*end the black items*/
+
+/*for the dashboard sidebar */
+#sidebar {
+    grid-area: sidebar;
+    background-color: var(--dark-gold-background);
+}
+
+#sidebar * {
+    color: white;
+}
+
+#sidebar a {
+    text-decoration: none;
+}
+
+#sidebar a:hover {
+    color: rgb(200, 200, 200);
+}
+
+#dashboard-nav-items div, #dashboard-company-info-items div {
+    margin-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+}
+
+#dashboard-text {
+    margin-left: 15px;
+    margin-bottom: 3rem;
+}
+
+#dashboard-text .mdi {
+    margin-right: 1rem;
+}
+
+.mdi {
+    margin-right: 1.5rem;
+}
+
+#dashboard-company-info-items {
+    margin-top: 3.5rem;
+}
+
+/*end the dashboard sidebar*/
+
+/*for the first header with the search bar and stuff */
+#top-first-header {
+    grid-area: header1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mdi-magnify, .mdi-bell-ring-outline{
+    margin-left: 2.5rem;
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
+#searchbar {
+    border-radius: 10px;
+    height: 1.25rem;
+    border: none;
+    background-color: rgba(211, 211, 211, 0.466);
+    width: 500px;
+}
+
+#right-part-top-first-header {
+    margin-left: auto;
+    margin-right: 4em;
+}
+
+.small {
+    height: 2rem;
+    margin-right: 0.75rem;
+    margin-left: 0.75rem;
+}
+
+/* <div id = "top-first-header">
+<div id = "left-part-top-first-header">
+    <span class = "mdi mdi-magnify"></span>
+    <input id = "searchbar" type = "search">
+</div>
+<div>
+    <span class = "mdi mdi-bell-ring-outline"></span>
+    <img src = "" alt = "profile picture">GoldDoof
+</div>
+</div> */
+
+/*end the first header*/
+
+
+/*for the second header*/
+#top-second-header {
+    grid-area: header2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#top-second-header-text {
+    margin-left: 1rem;
+}
+
+#top-second-header-text > p {
+    font-size: 1em;
+    margin-bottom: 0px;
+}
+
+#top-second-header-text > h2{
+    font-size: 1.4rem;
+    margin-top: 0px;
+}
+
+#top-second-header-btns-container {
+    margin-left: auto;
+    margin-right: 4rem;
+}
+
+#top-second-header-btns-container button {
+    border: none;
+    background-color: var(--dark-gold-background);
+    height: 2.5em;
+    width: 6em;
+    border-radius: 30px;
+    color: white;
+    margin-left: 2em;
+}
+
+.pfp {
+    border-radius: 50%;
+}
+
+.scale-up {
+    height: 3.25rem;
+    margin-left: 2rem;
+}
+
+/* <div id = "top-second-header">
+    <div><img src = "" alt = "bigger profile picture"></div>
+    <div>
+        <p>Hi there,</p>
+        <h2>GoldDoof (@golddoof)</h2>
+    </div>
+    <div>
+        <button>New</button>
+        <button>Upload</button>
+        <button>Share</button>
+    </div>
+</div>
+ */
+/*end the second header*/
+
+
+/*for the main content with the projects */
+#main-content {
+    grid-area: mainContent;
+    background-color: var(--content-background);
+}
+
+#main-content-header {
+    margin-left: 0.75em;
+}
+
+.header-text {
+    font-size: 1.25em;
+    margin-bottom: 0px;
+}
+
+#all-projects-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.project-container {
+    background-color: white;
+    margin: 1em;
+    height: 200px;
+    width: 325px;
+}
+
+/*  <div id = "main-content">
+        <h3>Your Projects</h3>
+        <div class = "project-container">
+            <div class = "project-text">
+                <h4>Super Cool Project</h4>
+                <p>Random text for now, write stuff later</p>
+            </div>
+            <div class = "project-button-icons">
+                <button><img src = "" alt = "favorite button"></button>
+                <button><img src = "" alt = "view button"></button>
+                <button><img src = "" alt = "git button"></button>
+            </div>
+        </div>
+        <div class = "project-container">
+            <div class = "project-text">
+                <h4>Super Cool Project</h4>
+                <p>Random text for now, write stuff later</p>
+            </div>
+            <div class = "project-button-icons">
+                <button><img src = "" alt = "favorite button"></button>
+                <button><img src = "" alt = "view button"></button>
+                <button><img src = "" alt = "git button"></button>
+            </div>
+        </div>
+        <div class = "project-container">
+            <div class = "project-text">
+                <h4>Super Cool Project</h4>
+                <p>Random text for now, write stuff later</p>
+            </div>
+            <div class = "project-button-icons">
+                <button><img src = "" alt = "favorite button"></button>
+                <button><img src = "" alt = "view button"></button>
+                <button><img src = "" alt = "git button"></button>
+            </div>
+        </div>
+        <div class = "project-container">
+            <div class = "project-text">
+                <h4>Super Cool Project</h4>
+                <p>Random text for now, write stuff later</p>
+            </div>
+            <div class = "project-button-icons">
+                <button><img src = "" alt = "favorite button"></button>
+                <button><img src = "" alt = "view button"></button>
+                <button><img src = "" alt = "git button"></button>
+            </div>
+        </div>
+        <div class = "project-container">
+            <div class = "project-text">
+                <h4>Super Cool Project</h4>
+                <p>Random text for now, write stuff later</p>
+            </div>
+            <div class = "project-button-icons">
+                <button><img src = "" alt = "favorite button"></button>
+                <button><img src = "" alt = "view button"></button>
+                <button><img src = "" alt = "git button"></button>
+            </div>
+        </div>
+        <div class = "project-container">
+            <div class = "project-text">
+                <h4>Super Cool Project</h4>
+                <p>Random text for now, write stuff later</p>
+            </div>
+            <div class = "project-button-icons">
+                <button><img src = "" alt = "favorite button"></button>
+                <button><img src = "" alt = "view button"></button>
+                <button><img src = "" alt = "git button"></button>
+            </div>
+        </div>
+        <div class = "project-container">
+            <div class = "project-text">
+                <h4>Super Cool Project</h4>
+                <p>Random text for now, write stuff later</p>
+            </div>
+            <div class = "project-button-icons">
+                <button><img src = "" alt = "favorite button"></button>
+                <button><img src = "" alt = "view button"></button>
+                <button><img src = "" alt = "git button"></button>
+            </div>
+        </div>
+    </div>
+*/
+
+/*end the main content*/
+
+/* for the sidebar with announcements and trending */
+
+#sidebar-2 {
+    grid-area: sidebar2;
+    background: var(--content-background);
+}
+/* 
+<div id = "sidebar-2">
+        <div id = "announcements-container">
+            <h3>Announcements</h3>
+            <div id = "announcements-content">
+                <div class = "announcement-items">
+                    <h4>Site Maintenance</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, fugit?</p>
+                </div>
+                <div class = "announcement-items">
+                    <h4>Community Share Day</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, fugit?</p>
+                </div>
+                <div class = "announcement-items">
+                    <h4>Updated Privacy Policy</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, fugit?</p>
+                </div>
+            </div>
+        </div>
+        <div id = "trending-container">
+            <h3>Trending</h3>
+            <div id = "trending-content">
+                <div class = "trending=items">
+                    <div><img class = "trending-pfp" src = "" alt = "random-logo"></div>
+                    <div class = "trending-text">
+                        <h4>@tegan</h4>
+                        <p>World Peace Builder</p>
+                    </div>
+                </div>
+            </div>
+            <div id = "trending-content">
+                <div class = "trending=items">
+                    <div><img class = "trending-pfp" src = "" alt = "random-logo"></div>
+                    <div class = "trending-text">
+                        <h4>@tegan</h4>
+                        <p>World Peace Builder</p>
+                    </div>
+                </div>
+            </div>
+            <div id = "trending-content">
+                <div class = "trending=items">
+                    <div><img class = "trending-pfp" src = "" alt = "random-logo"></div>
+                    <div class = "trending-text">
+                        <h4>@tegan</h4>
+                        <p>World Peace Builder</p>
+                    </div>
+                </div>
+            </div>
+            <div id = "trending-content">
+                <div class = "trending=items">
+                    <div><img class = "trending-pfp" src = "" alt = "random-logo"></div>
+                    <div class = "trending-text">
+                        <h4>@tegan</h4>
+                        <p>World Peace Builder</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> */
+
+/*end the sidebar*/

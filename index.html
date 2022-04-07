@@ -5,36 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href = "index.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
     <title>Document</title>
 </head>
 <body>
     <div class = "blackbar" id = "side1"></div>
     <div id = "sidebar">
-        <div><img src="" alt=""><h2>Dashboard</h2></div>
-        <div><img src="" alt=""><a href="">Home</a></div>
-        <div><img src="" alt=""><a href="">Profile</a></div>
-        <div><img src="" alt=""><a href="">Messages</a></div>
-        <div><img src="" alt=""><a href="">History</a></div>
-        <div><img src="" alt=""><a href="">Tasks</a></div>
-        <div><img src="" alt=""><a href="">Communities</a></div>
-        <div><img src="" alt=""><a href="">Settings</a></div>
-        <div><img src="" alt=""><a href="">Support</a></div>
-        <div><img src="" alt=""><a href="">Privacy</a></div>
+        <div id = "dashboard-text"><h1><span class = "mdi mdi-home"></span>Dashboard</h1></div>
+        <div id = "dashboard-nav-items">
+            <!-- need to finish changing all the icons -->
+            <div><a href=""><span class = "mdi mdi-home"></span>Home</a></div>
+            <div><span class = "mdi mdi-home"></span><img src="" alt=""><a href="">Profile</a></div>
+            <div><span class = "mdi mdi-message-reply-outline"></span><img src="" alt=""><a href="">Messages</a></div>
+            <div><span class = "mdi mdi-history"></span><img src="" alt=""><a href="">History</a></div>
+            <div><span class = "mdi mdi-home"></span><img src="" alt=""><a href="">Tasks</a></div>
+            <div><span class = "mdi mdi-home"></span><img src="" alt=""><a href="">Communities</a></div>
+        </div>
+        <div id = "dashboard-company-info-items">
+            <div><span class = "mdi mdi-cog-outline"></span><img src="" alt=""><a href="">Settings</a></div>
+            <div><span class = "mdi mdi-home"></span><img src="" alt=""><a href="">Support</a></div>
+            <div><span class = "mdi mdi-home"></span><img src="" alt=""><a href="">Privacy</a></div>
+        </div>
     </div>
+
+
     <div id = "top-first-header">
-        <img src = "" alt = "search button">
-        <input type = "search">
-        <img src = "" alt = "notification button">
-        <img src = "" alt = "profile picture">
-        <p>GoldDoof</p>
+        <div id = "left-part-top-first-header">
+            <span class = "mdi mdi-magnify"></span>
+            <input id = "searchbar" type = "search">
+        </div>
+        <div id = "right-part-top-first-header">
+            <span class = "mdi mdi-bell-ring-outline"></span>
+            <img class = "pfp small" src = "images/golddoof-pfp.png" alt = "profile picture">
+            <b>GoldDoof</b>
+        </div>
     </div>
     <div id = "top-second-header">
-        <div><img src = "" alt = "bigger profile picture"></div>
-        <div>
+        <div><img class = "pfp scale-up" src = "images/golddoof-pfp.png" alt = "bigger profile picture"></div>
+        <div id = "top-second-header-text">
             <p>Hi there,</p>
             <h2>GoldDoof (@golddoof)</h2>
         </div>
-        <div>
+        <div id = "top-second-header-btns-container">
             <button>New</button>
             <button>Upload</button>
             <button>Share</button>
@@ -42,89 +54,80 @@
     </div>
     
     <div id = "main-content">
-        <h3>Your Projects</h3>
-        <div class = "project-container">
-            <div class = "project-text">
-                <h4>Super Cool Project</h4>
-                <p>Random text for now, write stuff later</p>
+        <h3 id = "main-content-header" class = "header-text">Your Projects</h3>
+        <div id = "all-projects-container">
+            <div class = "project-container">
+                <div class = "project-text">
+                    <h4>Super Cool Project</h4>
+                    <p>Random text for now, write stuff later</p>
+                </div>
+                <div class = "project-button-icons">
+                    <button><img src = "" alt = "favorite button"></button>
+                    <button><img src = "" alt = "view button"></button>
+                    <button><img src = "" alt = "git button"></button>
+                </div>
             </div>
-            <div class = "project-button-icons">
-                <button><img src = "" alt = "favorite button"></button>
-                <button><img src = "" alt = "view button"></button>
-                <button><img src = "" alt = "git button"></button>
+            <div class = "project-container">
+                <div class = "project-text">
+                    <h4>Super Cool Project</h4>
+                    <p>Random text for now, write stuff later</p>
+                </div>
+                <div class = "project-button-icons">
+                    <button><img src = "" alt = "favorite button"></button>
+                    <button><img src = "" alt = "view button"></button>
+                    <button><img src = "" alt = "git button"></button>
+                </div>
             </div>
-        </div>
-        <div class = "project-container">
-            <div class = "project-text">
-                <h4>Super Cool Project</h4>
-                <p>Random text for now, write stuff later</p>
+            <div class = "project-container">
+                <div class = "project-text">
+                    <h4>Super Cool Project</h4>
+                    <p>Random text for now, write stuff later</p>
+                </div>
+                <div class = "project-button-icons">
+                    <button><img src = "" alt = "favorite button"></button>
+                    <button><img src = "" alt = "view button"></button>
+                    <button><img src = "" alt = "git button"></button>
+                </div>
             </div>
-            <div class = "project-button-icons">
-                <button><img src = "" alt = "favorite button"></button>
-                <button><img src = "" alt = "view button"></button>
-                <button><img src = "" alt = "git button"></button>
+            <div class = "project-container">
+                <div class = "project-text">
+                    <h4>Super Cool Project</h4>
+                    <p>Random text for now, write stuff later</p>
+                </div>
+                <div class = "project-button-icons">
+                    <button><img src = "" alt = "favorite button"></button>
+                    <button><img src = "" alt = "view button"></button>
+                    <button><img src = "" alt = "git button"></button>
+                </div>
             </div>
-        </div>
-        <div class = "project-container">
-            <div class = "project-text">
-                <h4>Super Cool Project</h4>
-                <p>Random text for now, write stuff later</p>
+            <div class = "project-container">
+                <div class = "project-text">
+                    <h4>Super Cool Project</h4>
+                    <p>Random text for now, write stuff later</p>
+                </div>
+                <div class = "project-button-icons">
+                    <button><img src = "" alt = "favorite button"></button>
+                    <button><img src = "" alt = "view button"></button>
+                    <button><img src = "" alt = "git button"></button>
+                </div>
             </div>
-            <div class = "project-button-icons">
-                <button><img src = "" alt = "favorite button"></button>
-                <button><img src = "" alt = "view button"></button>
-                <button><img src = "" alt = "git button"></button>
-            </div>
-        </div>
-        <div class = "project-container">
-            <div class = "project-text">
-                <h4>Super Cool Project</h4>
-                <p>Random text for now, write stuff later</p>
-            </div>
-            <div class = "project-button-icons">
-                <button><img src = "" alt = "favorite button"></button>
-                <button><img src = "" alt = "view button"></button>
-                <button><img src = "" alt = "git button"></button>
-            </div>
-        </div>
-        <div class = "project-container">
-            <div class = "project-text">
-                <h4>Super Cool Project</h4>
-                <p>Random text for now, write stuff later</p>
-            </div>
-            <div class = "project-button-icons">
-                <button><img src = "" alt = "favorite button"></button>
-                <button><img src = "" alt = "view button"></button>
-                <button><img src = "" alt = "git button"></button>
-            </div>
-        </div>
-        <div class = "project-container">
-            <div class = "project-text">
-                <h4>Super Cool Project</h4>
-                <p>Random text for now, write stuff later</p>
-            </div>
-            <div class = "project-button-icons">
-                <button><img src = "" alt = "favorite button"></button>
-                <button><img src = "" alt = "view button"></button>
-                <button><img src = "" alt = "git button"></button>
-            </div>
-        </div>
-        <div class = "project-container">
-            <div class = "project-text">
-                <h4>Super Cool Project</h4>
-                <p>Random text for now, write stuff later</p>
-            </div>
-            <div class = "project-button-icons">
-                <button><img src = "" alt = "favorite button"></button>
-                <button><img src = "" alt = "view button"></button>
-                <button><img src = "" alt = "git button"></button>
+            <div class = "project-container">
+                <div class = "project-text">
+                    <h4>Super Cool Project</h4>
+                    <p>Random text for now, write stuff later</p>
+                </div>
+                <div class = "project-button-icons">
+                    <button><img src = "" alt = "favorite button"></button>
+                    <button><img src = "" alt = "view button"></button>
+                    <button><img src = "" alt = "git button"></button>
+                </div>
             </div>
         </div>
     </div>
 
     <div id = "sidebar-2">
         <div id = "announcements-container">
-            <h3>Announcements</h3>
+            <h3 class = "header-text">Announcements</h3>
             <div id = "announcements-content">
                 <div class = "announcement-items">
                     <h4>Site Maintenance</h4>
@@ -141,7 +144,7 @@
             </div>
         </div>
         <div id = "trending-container">
-            <h3>Trending</h3>
+            <h3 class = "header-text">Trending</h3>
             <div id = "trending-content">
                 <div class = "trending=items">
                     <div><img class = "trending-pfp" src = "" alt = "random-logo"></div>
